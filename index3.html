@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+      <style>
+        /* ----- Menu Home ----- */
+        #menu ul {
+  padding: 0px;
+  margin: 0px;
+  background-color: #5c00b0;;
+  list-style: none;
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul li a {
+  padding: 5px;
+  display: inline-block;
+  background-color: #5c00b0;;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 3px solid #5c00b0;;
+}
+
+#menu ul li a:hover {
+  background-color: #5c00b0;
+  color: #ffffff;;
+  border-bottom: 3px solid #ffffff;
+}
+          /* -------- GLOBAL -------- */
+          @font-face {
+  font-family: montserrat;
+  src: url("font/Montserrat-Regular.otf");
+}
+
+body {
+  font-family: montserrat;
+  font-size: 1em;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.mr-2 {
+  margin-right: 2em;
+}
+
+.ml-1 {
+  margin-left: 1em;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-05 {
+  margin-top: 0.5em;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
+
+/* -------- CABEÇALHO -------- */
+
+header {
+  background-color: #5c00b0;
+  padding: 20px;
+  flex-direction: row;
+  align-items: inherit;
+}
+
+.logo {
+  width: 15%;
+  margin-bottom: 10px;
+}
+
+.search {
+  height: 30px;
+  width: 500px;
+  border-radius: 5px;
+}
+
+.lupa {
+  height: 25px;
+  position: relative;
+  z-index: 1;
+  left: -30px;
+  top: 1px;
+  cursor: pointer;
+}
+
+.image-header {
+  height: 40px;
+  padding: 0 10px;
+}
+
+
+/* -------- ESTRUTURA DA PÁGINA -------- */
+
+.container {
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.banner {
+  width: 100%;
+}
+
+.vantagens {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1em;
+}
+
+.body-content {
+  padding: 2em 3em;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.produtos {
+  background-color: #ededed;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  padding: 2em 3em;
+}
+
+.produtos .lista {
+  display: flex;
+  justify-content: space-between;
+}
+
+.produtos .lista .card {
+  padding: 0 1em;
+}
+
+.mais-produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-produto {
+  color: white;
+  background-color: #5c00b0;
+  border: 0;
+  border-radius: 5px;
+  padding: 2% 10%;
+  margin-top: 0.6em;
+  margin-bottom: 1.5em;
+}
+
+.button-comprar {
+  color: white;
+  background-color: #ff5000;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 4% 15%;
+  margin-top: 0.6em;
+  margin-bottom: 2.5em;
+}
+
+
+/* -------- TÍTULOS -------- */
+
+h1 {
+  margin: 0;
+}
+
+
+/* -------- TEXTO -------- */
+
+@font-face {
+  font-family: montserrat;
+  src: url("font/Montserrat-Regular.otf");
+}
+
+.font-5 {
+  font-size: 0.5em;
+  font-weight: 500;
+}
+
+.font-6 {
+  font-size: 0.6em;
+  font-weight: 500;
+}
+
+.font-7 {
+  font-size: 0.7em;
+}
+
+.font-7-bold {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.font-9-bold {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.text-branco {
+  color: #f5f4f4;
+}
+
+
+/* -------- IMAGENS -------- */
+
+.img-caminhao {
+  width: 3em;
+  padding-right: 0.5em;
+}
+
+.img-promo {
+  width: 2em;
+  padding-right: 0.3em;
+}
+
+.produtos .lista .card .img-card {
+  width: 100%;
+}
+
+.img-card {
+  width: 30%;
+}
+
+.img-product {
+  width: 100%;
+  height: 65%;
+  border-radius: 0.5em;
+}
+
+.img-coracao {
+  height: 1em;
+}
+
+      </style>
+    <meta charset="UTF-8">
+    <title>PetStore</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/css/style.css">
+  </head>
+  <body>
+    
+    <!-- Lembre-se de colocar o conteúdo abaixo dentro da tag <body> -->
+      <nav id="menu">
+        <ul>
+        
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Missão</a></li>
+          <li><a href="#">Links</a></li>
+        
+</nav>
+
+    <div class="container">
+      <header class="flex space-between">
+        <img src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/logo_horizontal.png">
+        <div class="flex flex-center">
+          <input class="search" placeholder="Digite aqui o que você deseja pesquisar. Exemplo: Ração">
+          <img src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_lupa.png ">
+        </div>
+        <div class="flex mr-2">
+          <div class="flex flex-center">
+            <img src= "C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/logo_horizontal.png">
+            <div>
+              <div class="text-branco">Seja Bem-Vindo</div>
+              <div class="font-6 text-branco">Entre ou cadastre-se</div>
+            </div>
+          </div>
+          <div class="flex flex-center ml-1">
+            <img class="image-header " src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_carrinho.png ">
+            <div>
+              <div class="text-branco">Carrinho</div>
+              <div class="font-6 text-branco">0 itens</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <nav class aria-label="menu-lateral">
+          <img class="banner" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/banner.jpg">
+          
+        </nav>
+        <div>
+          <div class="body-content">
+            <div class="vantagens">
+              <div class="flex flex-center">
+                <img class="img-caminhao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_caminhão.png">
+                <div>
+                  <div class="font-9-bold">Frete Grátis Brasil</div>
+                  <div class="font-7">Confira condições</div>
+                </div>
+              </div>
+              <div class="flex flex-center">
+                <img class="img-promo" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_cartao.png">
+                <div>
+                  <div class="font-9-bold">Até 10x sem juros</div>
+                  <div class="font-7">parcela mínima de R$20,00</div>
+                </div>
+              </div>
+              <div class="flex flex-center">
+                <img class="img-promo" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_whats.png">
+                <div>
+                  <div class="font-9-bold">Tire suas dúvidas</div>
+                  <div class="font-7">chame no WhatsApp</div>
+                </div>
+              </div>
+              <div class="flex flex-center">
+                <img class="img-promo" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_relogio.png">
+                <div>
+                  <div class="font-9-bold">Compra Agendada</div>
+                  <div class="font-7">Programe suas compras</div>
+                </div>
+              </div>
+            </div>
+            <div class="cards mt-2">
+              <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/foto_2.png">
+              <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/foto_3.png">
+              <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/foto_1.png">
+            </div>
+          </div>
+          <div class="produtos">
+            <div class="font-5">Cachorro/Ração/Ração Seca</div>
+            <div class="flex flex-center space-between">
+              <h1>CACHORRO</h1>
+              <div class="font-6">Ordenar por: <span>RELEVÂNCIA</span></div>
+            </div>
+            <div class="lista mt-2">
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto01.jpg">
+                <div class="font-6 mt-1">Ração Golden Special para cães Adultos Frango e Carne 15kg</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 135,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 6x 22,65</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto02.jpg">
+                <div class="font-6 mt-1">Ração Gran Plus Choice Frango e Carne Cães Adultos 15kg</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 149,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 7x 21,41</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto03.jpg">
+                <div class="font-6 mt-1">Ração Premier Formula Cães Adultos Raças Médias Sabor...</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 199,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 9x 22,11</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto04.jpg">
+                <div class="font-6 mt-1">Ração Golden Fórmula Sênior Raças Pequenas Frango e...</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 55,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 2x 27,95</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+            </div>
+            <div class="lista mt-2">
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto05.jpg">
+                <div class="font-6 mt-1">Ração Premier Nattu Cães Adultos Abóbora Pequeno...</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 40,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 2x 20,45</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto06.jpg">
+                <div class="font-6 mt-1">Ração Golden Fórmula para Cães Filhotes Carne e Arroz...</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 47,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 2x 23,95</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto07.jpg">
+                <div class="font-6 mt-1">Ração Royal Canin Mini Indoor Adult Cães Pequenos 1kg</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 47,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 2x 23,95</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+              <div class="card">
+                <img class="img-card" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/produto08.jpg">
+                <div class="font-6 mt-1">Ração para Cães Adultos Golden Seleção Natural Abób...</div>
+                <div class="flex space-between mt-05">
+                  <span class="font-9-bold">R$ 60,90</span>
+                  <img class="img-coracao" src="C:\Users\Microsoft\OneDrive\Área de Trabalho\Estudo HTML Fullture    Mes 02\HTML - Fullture\img/Icones_coracao.png">
+                </div>
+                <div class="font-6 mt-05">parcele em até 3x 20,30</div>
+                <button class="button-comprar">COMPRAR AGORA</button>
+              </div>
+            </div>
+            <div class="mais-produtos">
+              <button class="button-produto">MOSTRAR MAIS PRODUTOS</button>
+
+
+              <h2>O que você precisa?</h2>
+          <h3 class="text-roxo">CACHORRO</h3>
+          <ul>
+            <li><a href="#">Ração</a></li>
+            <li><a href="#">Ração Seca</a></li>
+            <li><a href="#">Ração Úmida</a></li>
+            <li><a href="#">Ração Medicamentosa</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Petiscos</a></li>
+            <li><a href="#">Ossinhos e Petiscos</a></li>
+            <li><a href="#">Cookies e Biscoitos</a></li>
+            <li><a href="#">Bifinhos</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Roupas e Acessórios</a></li>
+            <li><a href="#">Roupas de Inverno</a></li>
+            <li><a href="#">Roupas de Verão</a></li>
+            <li><a href="#">Acessórios de Moda</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Caminhas e Casinhas</a></li>
+            <li><a href="#">Caminhas</a></li>
+            <li><a href="#">Casinhas</a></li>
+            <li><a href="#">Almofadas e Colchonetes</a></li>
+            <li><a href="#">Lençol, Edredom e Cobertor</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Acessórios para Alimentação</a></li>
+            <li><a href="#">Comedouro</a></li>
+            <li><a href="#">Bebedouro</a></li>
+            <li><a href="#">Porta-ração</a></li>
+            <li><a href="#">Jogos Americanos Pet</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <h3 class="text-roxo">GATO</h3>
+          <ul>
+            <li><a href="#">Ração</a></li>
+            <li><a href="#">Ração Seca</a></li>
+            <li><a href="#">Ração Úmida</a></li>
+            <li><a href="#">Ração Medicamentosa</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Tocas e Caminhas</a></li>
+            <li><a href="#">Tocas</a></li>
+            <li><a href="#">Caminha</a></li>
+            <li><a href="#">Casinha</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Transporte</a></li>
+            <li><a href="#">Caixa de Transporte</a></li>
+            <li><a href="#">Coleira</a></li>
+            <li><a href="#">Proteção</a></li>
+            <li><a href="#">Colar Elizabetano</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Arranhadores e brinquedos</a></li>
+            <li><a href="#">Arranhadores</a></li>
+            <li><a href="#">Bolinhas</a></li>
+            <li><a href="#">Ratinhos</a></li>
+            <li><a href="#">Varinhas</a></li>
+            <li><a href="#">Brinquedos com Erva do Gato</a></li>
+            <li><a href="#">Brinquedos Interativos</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <h3 class="text-roxo">ACESSÓRIOS</h3>
+          <ul>
+            <li><a href="#">Roupas e Coleiras</a></li>
+            <li><a href="#">Cachorro</a></li>
+            <li><a href="#">Gato</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Tocas e Caminhas</a></li>
+            <li><a href="#">Cachorro</a></li>
+            <li><a href="#">Gato</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Comedouros e Bebedouros</a></li>
+            <li><a href="#">Potes</a></li>
+            <li><a href="#">Porta Ração</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Brinquedos</a></li>
+            <li><a href="#">Cachorro</a></li>
+            <li><a href="#">Gato</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <h3 class="text-roxo">HIGIENE</h3>
+          <ul>
+            <li><a href="#">Banho</a></li>
+            <li><a href="#">Cachorro</a></li>
+            <li><a href="#">Gato</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Limpeza</a></li>
+            <li><a href="#">Tapetes Higiênicos</a></li>
+            <li><a href="#">Caixa de areia</a></li>
+            <li><a href="#">Areia</a></li>
+            <li><a href="#">Desinfetante</a></li>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <h3 class="text-roxo mb-0">MEDICAMENTOS</h3>
+          <ul>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <h3 class="text-roxo mb-0">OUTROS PETS</h3>
+          <ul>
+            <li><a href="#">Ver todos+</a></li>
+          </ul>
+          <button class="button-promo">PROMOÇÕES</button>
+              <div class="font-6">mostrando 16 de 260</div>
+            
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
